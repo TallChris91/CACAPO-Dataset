@@ -6,4 +6,6 @@ CACAPO is a data-to-text dataset that contains sentences from news reports for t
 This GitHub page contains the "thin" version of the texts in the dataset, which means the annotated data, combined with links to the collected texts. Furthermore it contains the tools used to collect these texts.
 
 <h2>The full corpus</h2>
-The full corpus is available via [DataVerse](https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/LIBYHP). The format is the same as WebNLG
+
+The full corpus is available via 
+[DataVerse](https://dataverse.nl/dataset.xhtml). The format is the same as WebNLG
