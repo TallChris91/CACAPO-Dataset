@@ -8,7 +8,7 @@ This GitHub page contains the "thin" version of the texts in the dataset, which 
 <h2>The full dataset</h2>
 
 The full dataset is available via 
-[DataVerse](https://dataverse.nl/dataset.xhtml). The format is the same as that of [(Enriched) WebNLG](https://github.com/ThiagoCF05/webnlg). Meaning that the dataset consists of XML files that also contain intermediate representations to enable the development and evaluation of pipeline data-to-text architectures that encompass tasks such as Discourse Ordering, Lexicalization, Aggregation and Referring Expression Generation.
+[DataVerse](https://dataverse.nl/dataset.xhtml). The format is the same as that of [(Enriched) WebNLG](https://github.com/ThiagoCF05/webnlg) (v 1.5). Meaning that the dataset consists of XML files that also contain intermediate representations to enable the development and evaluation of pipeline data-to-text architectures that encompass tasks such as Discourse Ordering, Lexicalization, Aggregation and Referring Expression Generation.
 
 <h2>Example</h2>
 
