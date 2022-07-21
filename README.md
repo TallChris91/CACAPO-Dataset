@@ -8,4 +8,36 @@ This GitHub page contains the "thin" version of the texts in the dataset, which 
 <h2>The full corpus</h2>
 
 The full corpus is available via 
-[DataVerse](https://dataverse.nl/dataset.xhtml). The format is the same as WebNLG
+[DataVerse](https://dataverse.nl/dataset.xhtml). The format is the same as that of [(Enriched) WebNLG](https://github.com/ThiagoCF05/webnlg). Meaning that it is an XML file that also contain intermediate representations to enable the development and evaluation of pipeline data-to-text architectures. An example of what a single entry in the XML file looks like:
+
+```xml
+<entry category="EnglishIncidents" eid="Id118" size="2">
+  <originaltripleset>
+    <otriple>victimAge | 22-year-old</otriple>
+    <otriple>victimStatus | grazed_in_the_thigh</otriple>
+  </originaltripleset>
+  <modifiedtripleset>
+    <mtriple>victimAge | 22-year-old</mtriple>
+    <mtriple>victimStatus | grazed_in_the_thigh</mtriple>
+	</modifiedtripleset>
+	<lex comment="good" lid="Id1">
+    <sortedtripleset>
+      <sentence ID="1">
+        <striple>victimAge | 22-year-old</striple>
+        <striple>victimStatus | grazed_in_the_thigh</striple>
+      </sentence>
+    </sortedtripleset>
+    <references>
+      <reference entity="22-year-old" number="1" tag="PATIENT-1" type="description">A 22-year-old</reference>
+      <reference entity="grazed_in_the_thigh" number="2" tag="PATIENT-2" type="description">grazed in the thigh</reference>
+    </references>
+    <text>A 22-year-old was grazed in the thigh</text>
+    <template>PATIENT-1 was PATIENT-2</template>
+    <lexicalization>PATIENT-1 VP[aspect=simple,tense=past,voice=active,person=null,number=singular] be PATIENT-2</lexicalization>
+  </lex>
+  <entitymap>
+    <entity>PATIENT-1 | 22-year-old</entity>
+    <entity>PATIENT-2 | grazed_in_the_thigh</entity>
+  </entitymap>
+</entry>
+```
