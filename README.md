@@ -22,7 +22,7 @@ The full corpus is available via
     <mtriple>victimAge | 22-year-old</mtriple>
     <mtriple>victimStatus | grazed_in_the_thigh</mtriple>
 	</modifiedtripleset>
-	<lex comment="good" lid="Id1">
+  <lex comment="good" lid="Id1">
     <sortedtripleset>
       <sentence ID="1">
         <striple>victimAge | 22-year-old</striple>
