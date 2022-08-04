@@ -9,6 +9,8 @@ import os
 import warnings
 from bert_score import score
 import statistics
+import numpy as np
+from rouge_metric import PyRouge
 
 ##Add the locations of the resulting TGen output file and the Reference Test file
 tgenoutput = "TGen output here!"
@@ -66,22 +68,16 @@ print(f"System level Precision score: {bertp.mean():.6f}")
 print(f"System level Recall score: {bertr.mean():.6f}")
 print(f"System level F1 score: {bertf1.mean():.6f}")
 
-#Mean meteor score
-def ms_function(file1, file2):
-    with open(file1, 'r', encoding='utf-8') as f:
-        references = f.readlines()
-    with open(file2, 'r', encoding='utf-8') as f:
-        candidates = f.readlines()
+def corpus_meteor(hypstokens, refstokens):
+    meteor_score_sentences_list = []
+    [meteor_score_sentences_list.append(meteor_score(ref, hypo)) for ref, hypo in zip(refstokens, hypstokens)]
+    meteor_score_res = np.mean(meteor_score_sentences_list)
+    return meteor_score_res
 
-    allscores = []
+corpus_meteor(tgenoutput, referencefile)
 
-    for idx, val in enumerate(references):
-        ms = meteor_score([references[idx]], candidates[idx])
-        allscores.append(ms)
-
-    meanscore = statistics.mean(allscores)
-    return meanscore
-
-ms = ms_function(tgenoutput, referencefile)
-
-print(ms)
+rouge = PyRouge(rouge_n=(1, 2, 4), rouge_l=True, rouge_w=True,
+                rouge_w_weight=1.2, rouge_s=True, rouge_su=True, skip_gap=4)
+rouge_scores = rouge.evaluate(tgenoutput, referencefile)
+rouge_score = rouge_scores['rouge-l']['f']
+print(rouge_score)
