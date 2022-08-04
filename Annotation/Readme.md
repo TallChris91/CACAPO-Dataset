@@ -48,7 +48,7 @@ The annotation tool contains the following elements:
 8. Skip sentence. If it is a sentence that should not be in the text, you can press it. So you only use this for sentences that should not be part of the text (for example URLs). For sentences that belong in the text, but that do not contain any information, press save without annotating any further information.
 9. Skip text. If this text is not suitable for the corpus, you can press it.
 
-##Other things about the annotation tool
+<h3>Other things</h3>
 
 - "Previous" sometimes gives errors if you go back to a previous text and had skipped sentences. So be careful with that.
 - Sometimes when you change the data types in the pop-up bar, it gives problems with annotation afterwards. This is a bug. If you encounter this problem, it is best to press "Remove data type selection" and annotate the sentence again.
