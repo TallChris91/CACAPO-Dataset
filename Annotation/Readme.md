@@ -1,4 +1,4 @@
-# ANNOTATION
+# Annotation
 Files for the data annotation step for creating the CACAPO dataset
 
 <h2>Installation</h2>
