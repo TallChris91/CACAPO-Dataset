@@ -49,6 +49,6 @@ The full dataset is available via
 <img src="https://github.com/TallChris91/CACAPO-Dataset/blob/main/Kakapo.jpg" alt="A kakapo" width="500"/>
 <sub><sup><i>Credits: Andrew Digby, Twitter: @takapodigs</i></sup></sub><br/><br/>
 
-We are aware that the acronym for this dataset is far-fetched, and have also been made aware that the name is phonetically similar to a naughty French word. However, the name of the dataset is a thinly-veiled excuse to raise awareness for the [Kākāpō](https://en.wikipedia.org/wiki/K%C4%81k%C4%81p%C5%8D). The kākāpō is the world's only flightless parrot, and unfortunately, they are critically endangered. At this time, there are only 197 kākāpō alive today, but it is not too late to save this beautiful animal from extinction. 
+We are aware that the acronym for this dataset is far-fetched, and have also been made aware that the name is phonetically similar to a naughty French word. However, the name of the dataset is a thinly-veiled excuse to raise awareness for the [Kākāpō](https://en.wikipedia.org/wiki/K%C4%81k%C4%81p%C5%8D). The kākāpō is the world's only flightless parrot, and unfortunately, they are critically endangered. There are only 197 kākāpō alive today, but it is not too late to save this beautiful animal from extinction. 
 
 If you would like to support the conservation efforts, you can <b>[donate to Kākāpō Recovery](https://www.doc.govt.nz/our-work/kakapo-recovery/get-involved/donate/)</b>.
