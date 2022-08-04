@@ -34,7 +34,9 @@ The domains using the Tkinter-based tool contain the following scripts:
 3. Train_Dev_Test_Split --> Split the annotated sentences up into a train, development, and test set.
 4. Convert_Formats --> Output the annotated sentences into a [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/), [WebNLG](https://webnlg-challenge.loria.fr/), [CoNLL-2003](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification/), [TRECQA](https://github.com/Kyung-Min/CompareModels_TRECQA/), or a format suitable for a classification model.
 
+![alt text](https://github.com/TallChris91/CACAPO-Dataset/blob/main/Annotation/Annotationtool.png "Annotation tool")
 
+The annotation tool contains the following elements:
 
 1. The whole message, with the current sentence in bold
 2. The current sentence. Here you can also make changes to the sentence.
@@ -45,3 +47,22 @@ The domains using the Tkinter-based tool contain the following scripts:
 7. Previous. If you consider that there are errors in an earlier sentence, you can go to this sentence.
 8. Skip sentence. If it is a sentence that should not be in the text, you can press it. So you only use this for sentences that should not be part of the text (for example URLs). For sentences that belong in the text, but that do not contain any information, press save without annotating any further information.
 9. Skip text. If this text is not suitable for the corpus, you can press it.
+
+##Other things about the annotation tool
+
+- "Previous" sometimes gives errors if you go back to a previous text and had skipped sentences. So be careful with that.
+- Sometimes when you change the data types in the pop-up bar, it gives problems with annotation afterwards. This is a bug. If you encounter this problem, it is best to press "Remove data type selection" and annotate the sentence again.
+- The sentence splitter is not perfect. Especially passages like <i>"3 p.m. Sunday"</i> are often split into two sentences. What I do then is paste the second part of the sentence (<i>Sunday</i>) after the first sentence (<i>3 p.m.</i>) in "Current Sentence". I then annotate the entire sentence and save it. Then you get to see the second part of the sentence again and there you press "Skip sentence".
+- You often have multiple passages about the same data type. For example, in a sentence like <i>"This happened early Sunday on the Brooklyn Bridge at 3 p.m."</i> The passages "early Sunday" and "3 p.m." both are about the date. To include both passages, add both passages to the date label, with ";;" (2 semicolons) in between. So "early Sunday;;3 p.m." This double separator tells the script that there are two separate passages in the sentence it needs to look for. Even if the passages are the same word, e.g. <i>"Witnesses say four people were injured, but all four of them were in stable condition"</i> in this case enter "four;; four" for victimNumber.
+
+<h2>Prodigy annotation</h2>
+
+The domains using Prodigy contain the following scripts:
+
+1. Create_Jsonl --> Reformats the original texts into a Jsonl-format that is usable by Prodigy.
+2. Prodigy_Commands --> The main tool: runs the terminal commands to start the Prodigy server. Make sure to lead the virtual environment line to a virtual environment that has Prodigy and spaCy (with the relevant models) installed.
+3. Train_Dev_Test_Split --> Split the annotated sentences up into a train, development, and test set.
+4. Add_Paragraph_Sentence_Info --> Add the paragraph and sentence index of the annotated data. Important for the SQuAD 2.0 format.
+4. Convert_Formats --> Output the annotated sentences into a [SQuAD 2.0](https://rajpurkar.github.io/SQuAD-explorer/), [WebNLG](https://webnlg-challenge.loria.fr/), [CoNLL-2003](https://github.com/huggingface/transformers/tree/main/examples/pytorch/token-classification/), [TRECQA](https://github.com/Kyung-Min/CompareModels_TRECQA/), or a format suitable for a classification model.
+
+Prodigy's annotation system is quite straightforward.
